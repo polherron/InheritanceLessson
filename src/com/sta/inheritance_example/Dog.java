@@ -4,7 +4,6 @@ public class Dog {
 	
 	public double sellingPrice = 100;
 	double purchasePrice;
-	
 	public Dog()
 	{
 		
