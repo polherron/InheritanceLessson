@@ -6,6 +6,8 @@ package com.sta.inheritance_example;
  */
 public class Poodle extends Dog {
 
+	public double sellingPrice = 400;
+	
 	/**
 	 * 
 	 */
@@ -26,6 +28,11 @@ public class Poodle extends Dog {
 	public void voice()
 	{
 		System.out.println("Yap Yap slightly annyingly");
+	}
+	
+	public boolean isGuardDog()
+	{
+		return false;
 	}
 
 }
