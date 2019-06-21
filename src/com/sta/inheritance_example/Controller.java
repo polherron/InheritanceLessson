@@ -8,7 +8,6 @@ public class Controller {
 		myDog.voice();
 		System.out.println("Purchase Price is " + myDog.purchasePrice);
 		System.out.println("Purchase Price is " + myDog.sellingPrice);
-
 	}
 
 }
