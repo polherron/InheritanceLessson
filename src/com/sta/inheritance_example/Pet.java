@@ -19,7 +19,7 @@ public abstract class Pet {
 	/**
 	 * @return the licenceRequired
 	 */
-	boolean isLicenceRequired() {
+	public boolean isLicenceRequired() {
 		return licenceRequired;
 	}
 
