@@ -47,7 +47,8 @@ public class Controller {
 	}
 
 	//Checks if element exists
-	private static boolean elementExistsByName(ArrayList<Pet> myPets, String searchString) {
+	private static boolean elementExistsByName(ArrayList<Pet> myPets, 
+			String searchString) {
 		for (int i = 0; i < myPets.size(); i++) {
 			if (myPets.get(i).getName().contains(searchString))
 				return true;
@@ -56,7 +57,8 @@ public class Controller {
 	}
 
 	//Returns the index number of an ArrayList element using Name
-	private static int findElementByName(ArrayList<Pet> myPets, String searchString) {
+	private static int findElementByName(ArrayList<Pet> myPets, 
+			String searchString) {
 		int index = 0;
 		for (int i = 0; i < myPets.size(); i++) {
 			if (myPets.get(i).getName().contains(searchString))
