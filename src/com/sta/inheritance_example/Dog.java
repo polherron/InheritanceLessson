@@ -2,46 +2,29 @@ package com.sta.inheritance_example;
 
 public class Dog extends Pet {
 	
-	public double sellingPrice = 100;
-	double purchasePrice;
-	
 	public Dog()
 	{
 		
 	}
 	
-	public Dog(double purchasePrice) {
-		super();
-		this.purchasePrice = purchasePrice;
-	}
-	
-	public Dog(boolean licenceRequired, String name,
-			double purchasePrice, int petNo) 
-	{
-		super(licenceRequired, name, petNo);
-	}
-	
 	/**
-	 * @param sellingPrice
+	 * @param petNo
+	 * @param petType
+	 * @param name
 	 * @param purchasePrice
+	 * @param licenceRequired
 	 */
-	public Dog(double sellingPrice, double purchasePrice) {
-		super();
-		this.sellingPrice = sellingPrice;
-		this.purchasePrice = purchasePrice;
+	public Dog(int petNo, String petType, String name, double purchasePrice,
+			boolean licenceRequired) {
+		super(petNo, petType, name, purchasePrice, licenceRequired);
+		// TODO Auto-generated constructor stub
 	}
 
-	double getSellingPrice() {
-		return sellingPrice;
-	}
 
-	void setSellingPrice(double sellingPrice) {
-		this.sellingPrice = sellingPrice;
-	}
-
-	public void voice()
+	@Override
+	public String voice()
 	{
-		System.out.println("Bark Bark");
+		return "Bark Bark";
 	}
 
 	@Override

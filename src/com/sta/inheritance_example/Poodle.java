@@ -17,29 +17,25 @@ public class Poodle extends Dog {
 	}
 
 	/**
+	 * @param petNo
+	 * @param petType
+	 * @param name
 	 * @param purchasePrice
+	 * @param licenceRequired
 	 */
-	public Poodle(double purchasePrice) {
-		super(purchasePrice);
+	public Poodle(int petNo, String petType, String name, double purchasePrice,
+			boolean licenceRequired) {
+		super(petNo, petType, name, purchasePrice, licenceRequired);
 		// TODO Auto-generated constructor stub
 	}
 
-	public Poodle(boolean licenceRequired, String name,
-			double purchasePrice, int petNo) 
-	{
-		super(licenceRequired, name, purchasePrice, petNo);
-	}
-	
-	@Override
-	public void voice()
-	{
-		System.out.println("Yap Yap slightly annyingly");
-	}
-	
-	public boolean isGuardDog()
-	{
-		return false;
-	}
 
+
+	@Override
+	public String voice()
+	{
+		return ("Yap Yap slightly annyingly");
+	}
+	
 }
 
