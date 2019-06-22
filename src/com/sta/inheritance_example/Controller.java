@@ -15,6 +15,7 @@ public class Controller {
 		myPets.add(myPooch);
 		myPets.add(myPooch1);
 
+		printListArrayNames(myPets);
 		sortArray(myPets);
 		printListArrayNames(myPets);
 		
@@ -73,18 +74,13 @@ public class Controller {
 	 * Sorts the array by pet Name
 	 */
 	private static void sortArray(ArrayList<Pet> myPets) {
-		printListArrayNames(myPets);
-
 		//Using the collections pattern to sort ListArray
 		Collections.sort(myPets, new Comparator<Pet>() {
 			public int compare(Pet pet1, Pet pet2) {
-				return Integer.valueOf(pet1.getName().compareTo(pet2.getName()));
+				return Integer.valueOf(pet1.getName().
+						compareTo(pet2.getName()));
 			}
 		});
-
-		System.out.println("Sorted");
-
-		printListArrayNames(myPets);
 	}
 
 }
