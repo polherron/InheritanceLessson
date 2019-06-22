@@ -24,6 +24,12 @@ public class Poodle extends Dog {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Poodle(boolean licenceRequired, String name,
+			double purchasePrice, int petNo) 
+	{
+		super(licenceRequired, name, purchasePrice, petNo);
+	}
+	
 	@Override
 	public void voice()
 	{
