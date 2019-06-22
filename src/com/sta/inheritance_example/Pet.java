@@ -1,6 +1,8 @@
 package com.sta.inheritance_example;
 
-public abstract class Pet {
+import java.io.Serializable;
+
+public abstract class Pet implements Serializable {
 	
 	int petNo;
 	String petType;

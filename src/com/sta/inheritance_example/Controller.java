@@ -12,16 +12,17 @@ public class Controller {
 		myPets.add(new Dog(1, "Dog", "Star", 200, true));
 		myPets.add(new Poodle(2, "Poodle", "Moon", 200, false));
 		myPets.add(new Poodle(3, "Poodle", "Venus", 200, false));
-		String myPetsString = MyUtilities.arrayToString(myPets);
 		
-		boolean fileOpSuccessful = FileOps.WriteToFile(myPetsString,false);
+		boolean fileOpSuccessful = FileOps.writeToSerialFile(myPets);
 		
-		String fileInput = "";
+		ArrayList<Pet> myFileIP = FileOps.readFromSerialFile();
+		
+		for (Pet pet : myFileIP) {
+			System.out.println(pet.getName());
+		}
 
-		ArrayList<String> myInput = FileOps.ReadFile();
 		
 		System.out.println("File output");
-		System.out.println(myInput);
 
 
 	}

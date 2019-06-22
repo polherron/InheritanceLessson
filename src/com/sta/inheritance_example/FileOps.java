@@ -5,6 +5,8 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
@@ -48,4 +50,52 @@ public class FileOps {
 		}
 		return list;
 	}
+
+	public static boolean writeToSerialFile(ArrayList<Pet> myPets) {
+		 try
+	        {
+	            FileOutputStream fos = new FileOutputStream("c:/assessop/data.dat");
+	            ObjectOutputStream oos = new ObjectOutputStream(fos);
+	            oos.writeObject(myPets);
+	            oos.close();
+	            fos.close();
+	            return true;
+	        }
+	        catch (IOException ioe)
+	        {
+	            return false;
+	        }
+	}
+
+	public static ArrayList<Pet> readFromSerialFile() {
+		
+		ArrayList<Pet> myPets = new ArrayList<Pet>();
+		
+		try
+        {
+			
+			
+            FileInputStream fis = new FileInputStream("c:/assessop/data.dat");
+            ObjectInputStream ois = new ObjectInputStream(fis);
+ 
+            myPets = (ArrayList) ois.readObject();
+ 
+            ois.close();
+            fis.close();
+        }
+        catch (IOException ioe)
+        {
+            ioe.printStackTrace();
+            return null;
+        }
+        catch (ClassNotFoundException c)
+        {
+            System.out.println("Class not found");
+            c.printStackTrace();
+            return null;
+        }
+		return myPets;
+	}
+	
+	
 }
