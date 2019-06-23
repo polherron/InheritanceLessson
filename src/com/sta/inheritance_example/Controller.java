@@ -7,7 +7,7 @@ public class Controller {
 		Dog myDog = new Dog(200);
 		myDog.voice();
 		System.out.println("Purchase Price is " + myDog.purchasePrice);
-		System.out.println("Purchase Price is " + myDog.sellingPrice);
+		System.out.println("Selling Price is " + myDog.sellingPrice);
 
 	}
 
