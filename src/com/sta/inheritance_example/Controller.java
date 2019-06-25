@@ -16,11 +16,14 @@ public class Controller {
 			myDoggies.add(myPooch1);
 			myDoggies.add(o);
 			
-			for (Object dog : myDoggies) {
-				System.out.println(dog.getName);
-			}
-						
-			
+			for (Object ob : myDoggies) {
+				if(ob instanceof Poodle)
+				{
+					System.out.println(((Poodle)ob).getName() + "This is a Poodle");
+				}
+				else if(ob instanceof Dog)
+				{
+					System.out.println(((Dog)ob).getName() + "This is a dog");
 			}
 		}
 
