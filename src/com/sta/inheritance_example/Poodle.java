@@ -8,6 +8,15 @@ public class Poodle extends Dog {
 
 	public double sellingPrice = 400;
 	
+	
+	
+	/**
+	 * @return the sellingPrice
+	 */
+	double getSellingPrice() {
+		return sellingPrice;
+	}
+
 	/**
 	 * 
 	 */
