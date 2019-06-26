@@ -6,8 +6,17 @@ package com.sta.inheritance_example;
  */
 public class Poodle extends Dog {
 
-	public double sellingPrice = 400;
-	
+	/**
+	 * @param isGuardDog
+	 * @param licenceRequired
+	 * @param purchasePrice
+	 * @param sellingPrice
+	 */
+	public Poodle(boolean isGuardDog, boolean licenceRequired, double purchasePrice, double sellingPrice) {
+		super(isGuardDog, licenceRequired, purchasePrice, sellingPrice);
+		// TODO Auto-generated constructor stub
+	}
+
 	/**
 	 * 
 	 */
@@ -15,24 +24,13 @@ public class Poodle extends Dog {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
-	/**
-	 * @param purchasePrice
-	 */
-	public Poodle(double purchasePrice) {
-		super(purchasePrice);
-		// TODO Auto-generated constructor stub
-	}
+	
+	
 
 	@Override
-	public void voice()
+	public String voice()
 	{
-		System.out.println("Yap Yap slightly annyingly");
-	}
-	
-	public boolean isGuardDog()
-	{
-		return false;
+		return "Yap Yap slightly annyingly";
 	}
 
 }
