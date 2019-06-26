@@ -94,6 +94,13 @@ public class FileOps {
             c.printStackTrace();
             return null;
         }
+		
+		catch (Exception e)
+        {
+            System.out.println("General exception");
+            e.printStackTrace();
+            return null;
+        }
 		return myPets;
 	}
 	
